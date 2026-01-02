@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.year-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 14px);
+  gap: 4px;
+}
+
+.day {
+  width: 14px;
+  height: 14px;
+  background: #eee;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.day:hover {
+  outline: 1px solid #333;
+}
+
+.day.today {
+  outline: 2px solid black;
+}
+
+.day.verybad { background: rgb(247,0,0); }
+.day.bad { background: rgb(255,137,2); }
+.day.average { background: rgb(247,231,0); }
+.day.good { background: rgb(169,214,34); }
+.day.verygood { background: rgb(13,126,51); }
+
+.mood.verybad { background: rgb(247,0,0); }
+.mood.bad { background: rgb(255,137,2); }
+.mood.average { background: rgb(247,231,0); }
+.mood.good { background: rgb(169,214,34); }
+.mood.verygood { background: rgb(13,126,51); }
+
+
+.picker {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.mood {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.legend {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.legend .day {
+  cursor: default;
+}
